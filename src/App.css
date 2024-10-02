@@ -1,0 +1,40 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  border: 1px solid red;
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  gap: 20px;
+}
+
+.postlist {
+  width: 50%;
+  display: flex;
+  border: none;
+  flex-direction: column;
+}
+
+.postdetail {
+  width: 50%;
+  display: flex;
+  border: none;
+  flex-direction: column;
+}
+
+.SelectedPost {
+  background-color: rgb(182, 181, 181);
+}
+
+.Post {
+  border-radius: 5px;
+  margin: 2px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.CommentPost {
+  margin: 5px;
+  font-size: 20px;
+}
