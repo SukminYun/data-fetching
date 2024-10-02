@@ -14,7 +14,7 @@ type Post = {
 };
 
 export const App = () => {
-  const [posts, setPost] = useState<Post[]>();
+  const [posts, setPost] = useState<Post[]>([]);
   const [selectedID, setID] = useState<number>(1);
 
   useEffect(() => {
@@ -35,9 +35,16 @@ export const App = () => {
     };
   }, []);
 
+  if (posts.length === 0)
+    return (
+      <div className="wrapper">
+        <div> Loading~ </div>
+      </div>
+    );
+
   return (
     <div className="wrapper">
-      <PostList posts={posts as Post[]} selectedID={selectedID} setID={setID} />
+      <PostList posts={posts} selectedID={selectedID} setID={setID} />
       <PostDetail selectedID={selectedID} />
     </div>
   );
